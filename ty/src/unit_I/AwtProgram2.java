@@ -3,7 +3,9 @@ import java.awt.Color;
 import java.awt.Frame;
 import java.awt.TextField;
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;  
+import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;  
   
  /**
   *  In this program AwtProgram2 class implements ActionListener.
@@ -21,6 +23,19 @@ public class AwtProgram2 implements ActionListener{
 	 * method so they are declared as class variable 
 	 *  
 	 */
+	class InnerAdapter extends WindowAdapter {
+		Frame f;
+		public InnerAdapter(Frame f)
+		{
+			this.f = f;
+		}
+		@Override
+		public void windowClosing(WindowEvent e) {
+			System.out.println("windowClosing In Inner Class");
+			f.dispose();
+		}
+	}
+	
 	TextField txtNum1;
 	TextField txtNum2 ;
 	MyLabel lblNum3;
@@ -48,7 +63,7 @@ public class AwtProgram2 implements ActionListener{
 		txtNum2.setBounds(70, 90, 100, 40);
 		lblNum1.setBounds(10, 40, 100, 40);
 		lblNum2.setBounds(10, 90, 100, 40);
-		lblNum3.setBounds(80, 200, 100, 50);
+		lblNum3.setBounds(80, 200, 200, 50);
         
 		MyButton btn =new MyButton("ADD", 20, 1, "Courier", 
         		bg, fg);  
@@ -66,7 +81,14 @@ public class AwtProgram2 implements ActionListener{
         f.setLayout(null);   //set default layout for frame.  
         f.setVisible(true);  //set frame visibility true.
         
-        f.addWindowListener(new MywinLis(f));
+        f.addWindowListener(new WindowAdapter() {
+        	@Override
+    		public void windowClosing(WindowEvent e) {
+    			System.out.println(
+    					"windowClosing In anonymous Class");
+    			f.dispose();
+    		}
+		});
     }  
   
 	public static void main(String[] args) 
@@ -80,6 +102,6 @@ public class AwtProgram2 implements ActionListener{
 		int n1 = Integer.parseInt(txtNum1.getText());
 		int n2 = Integer.parseInt(txtNum2.getText());
 		int add = n1 +n2;
-		lblNum3.setText(" "+add);
+		lblNum3.setText("Addition is = "+add);
 	}  
 }
