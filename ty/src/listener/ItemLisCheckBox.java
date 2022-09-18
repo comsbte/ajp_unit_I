@@ -12,10 +12,10 @@ public class ItemLisCheckBox implements ItemListener{
 		//System.out.println(e.paramString());
 		String ch = (String)e.getItem();
 		if(e.getStateChange()==e.SELECTED) {
-			System.out.println("I want "+ch);
+			System.out.println("My "+ch+" Subject is Back");
 		}
 		else {
-			System.out.println("I don't want "+ch);
+			System.out.println("I am Passed in "+ch);
 		}
 	}
 
