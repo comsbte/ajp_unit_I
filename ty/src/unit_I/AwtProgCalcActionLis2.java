@@ -14,9 +14,9 @@ import myComponent.MyLabel;
  * as constructor parameter.
  * 
  */
-public class AwtProgram3{  
+public class AwtProgCalcActionLis2{  
 	
-	public AwtProgram3()  
+	public AwtProgCalcActionLis2()  
     {  
 		Frame f = new Frame();
 		Color bg = new Color(0, 255, 0);
@@ -47,6 +47,7 @@ public class AwtProgram3{
         btn.setBounds(80, 150, 100, 50);
         
         btn.addActionListener(new BtnClick(txtNum1,txtNum2,lblNum3));
+        
         f.add(btn);         //adding a new Button.  
         f.add(txtNum1);         //adding a new Button.
         f.add(txtNum2);         //adding a new Button.
@@ -63,7 +64,7 @@ public class AwtProgram3{
   
 	public static void main(String[] args) 
 	{    
-        AwtProgram2 awt = new AwtProgram2();   //creating a frame  
+        AwtProgCalcActionLis1 awt = new AwtProgCalcActionLis1();   //creating a frame  
     }
 
 	

@@ -21,7 +21,7 @@ import myComponent.MyLabel;
   * @author arutwar
   *
   */
-public class AwtProgram2 implements ActionListener{ 
+public class AwtProgCalcActionLis1 implements ActionListener{ 
 	/**Below three objects are required in 
 	 * actionPerformed(ActionEvent e)
 	 * method so they are declared as class variable 
@@ -44,7 +44,7 @@ public class AwtProgram2 implements ActionListener{
 	TextField txtNum2 ;
 	MyLabel lblNum3;
 	
-	public AwtProgram2()  
+	public AwtProgCalcActionLis1()  
     {  
 		Frame f = new Frame();
 		Color bg = new Color(0, 255, 0);
@@ -105,7 +105,7 @@ public class AwtProgram2 implements ActionListener{
   
 	public static void main(String[] args) 
 	{    
-        AwtProgram2 awt = new AwtProgram2();   //creating a frame  
+        AwtProgCalcActionLis1 awt = new AwtProgCalcActionLis1();   //creating a frame  
     }
 
 	@Override
