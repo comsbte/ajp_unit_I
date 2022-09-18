@@ -4,8 +4,8 @@ import java.awt.CheckboxGroup;
 import java.awt.Choice;
 import java.awt.Frame;
 
+import listener.MywinLis;
 import myComponent.MyCheckbox;
-import myComponent.MywinLis;
 
 public class AwtProgram4 {
 	public static void main(String[] args) {

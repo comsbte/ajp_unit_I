@@ -4,7 +4,7 @@ import java.awt.Frame;
 import java.awt.Label;
 import java.awt.TextField;
 
-import myComponent.MywinLis;  
+import listener.MywinLis;  
  
 /**
  * This is basic program without action for Button.

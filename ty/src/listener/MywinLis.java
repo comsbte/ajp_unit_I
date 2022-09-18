@@ -1,4 +1,4 @@
-package myComponent;
+package listener;
 
 import java.awt.Frame;
 import java.awt.event.WindowEvent;
