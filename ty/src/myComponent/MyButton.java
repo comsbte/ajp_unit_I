@@ -1,14 +1,14 @@
-package unit_I;
+package myComponent;
 
+import java.awt.Button;
 import java.awt.Color;
 import java.awt.Font;
-import java.awt.Label;
 /**
  * This class is used by AwtProgram2 and AwtProgram3 
  * @author arutwar
  *
  */
-public class MyLabel extends Label {
+public class MyButton extends Button{
 	/**
 	 * 
 	 * @param title
@@ -18,12 +18,11 @@ public class MyLabel extends Label {
 	 * @param backgroungColor
 	 * @param foreGroundColor
 	 */
-	public MyLabel(String title, int fontSize, 
+	 public MyButton(String title, int fontSize, 
 			 int style, String fontName, 
 			 Color backgroungColor, Color foreGroundColor) {
-		// TODO Auto-generated constructor stub
 		
-		Font myFont;
+		 Font myFont;
 		 if(style==1)
 			 myFont = new Font(fontName, Font.ITALIC,fontSize);
 		 else if(style==2)
@@ -32,7 +31,7 @@ public class MyLabel extends Label {
 			 myFont = new Font(fontName, Font.PLAIN,fontSize);
 		 
 		 setFont(myFont);
-		 setText(title);
+		 setLabel(title);
 		 setBackground(backgroungColor);
 		 setForeground(foreGroundColor);
 	}

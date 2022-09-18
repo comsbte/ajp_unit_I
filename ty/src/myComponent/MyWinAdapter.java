@@ -1,4 +1,4 @@
-package unit_I;
+package myComponent;
 
 import java.awt.Frame;
 import java.awt.event.WindowAdapter;
@@ -12,7 +12,6 @@ public class MyWinAdapter extends WindowAdapter {
 	}
 	@Override
 	public void windowClosing(WindowEvent e) {
-		// TODO Auto-generated method stub
 		System.out.println("windowClosing");
 		f.dispose();
 	}

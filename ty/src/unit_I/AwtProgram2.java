@@ -1,11 +1,15 @@
 package unit_I;
 import java.awt.Color;
 import java.awt.Frame;
+import java.awt.Label;
 import java.awt.TextField;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;  
+import java.awt.event.WindowEvent;
+
+import myComponent.MyButton;
+import myComponent.MyLabel;  
   
  /**
   *  In this program AwtProgram2 class implements ActionListener.
@@ -58,7 +62,7 @@ public class AwtProgram2 implements ActionListener{
 		lblNum3 = 
 				new MyLabel("",20,1,"Courier",Color.cyan,
 						Color.RED);
-		
+		lblNum3.setAlignment(Label.RIGHT);
 		txtNum1.setBounds(70, 40, 100, 40);
 		txtNum2.setBounds(70, 90, 100, 40);
 		lblNum1.setBounds(10, 40, 100, 40);
@@ -67,10 +71,18 @@ public class AwtProgram2 implements ActionListener{
         
 		MyButton btn =new MyButton("ADD", 20, 1, "Courier", 
         		bg, fg);  
+		
+		MyButton btnSub =new MyButton("SUB", 20, 1, "Courier", 
+        		bg, fg); 
         
         btn.setBounds(80, 150, 100, 50);  
+        btnSub.setBounds(180, 150, 100, 50);
+        
         btn.addActionListener(this);
+        btnSub.addActionListener(this);
+        
         f.add(btn);         //adding a new Button.  
+        f.add(btnSub);
         f.add(txtNum1);         //adding a new Button.
         f.add(txtNum2);         //adding a new Button.
         f.add(lblNum1);         //adding a new Button.
@@ -101,7 +113,14 @@ public class AwtProgram2 implements ActionListener{
 		
 		int n1 = Integer.parseInt(txtNum1.getText());
 		int n2 = Integer.parseInt(txtNum2.getText());
-		int add = n1 +n2;
-		lblNum3.setText("Addition is = "+add);
+		String command = e.getActionCommand();
+		if(command.contains("ADD")) {
+			int add = n1 +n2;
+			lblNum3.setText("Addition is = "+add);
+		}
+		else if(command.contains("SUB")) {
+			int sub = n1 -n2;
+			lblNum3.setText("Subtraction is = "+sub);
+		}
 	}  
 }

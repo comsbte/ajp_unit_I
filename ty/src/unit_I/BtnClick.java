@@ -3,6 +3,8 @@ package unit_I;
 import java.awt.TextField;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
+import myComponent.MyLabel;
 /**
  * This class is used by AwtProgram3
  * @author arutwar

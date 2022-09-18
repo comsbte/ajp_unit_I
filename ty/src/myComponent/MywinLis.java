@@ -1,4 +1,4 @@
-package unit_I;
+package myComponent;
 
 import java.awt.Frame;
 import java.awt.event.WindowEvent;
