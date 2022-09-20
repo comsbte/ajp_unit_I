@@ -22,8 +22,8 @@ public class AwtProgCalcActionLis2{
 		Color bg = new Color(0, 255, 0);
 		Color fg = new Color(0, 0, 255);
 		
-		TextField txtNum1 = new TextField();
-		TextField txtNum2 = new TextField();
+		TextField txtNum1 = new TextField("0");
+		TextField txtNum2 = new TextField("0");
 		
 		MyLabel lblNum1 = 
 				new MyLabel("Number 1",12,1,"Courier",bg,fg);
@@ -35,8 +35,9 @@ public class AwtProgCalcActionLis2{
 				new MyLabel("",20,1,"Courier",Color.cyan,
 						Color.RED);
 		
-		txtNum1.setBounds(70, 40, 100, 40);
-		txtNum2.setBounds(70, 90, 100, 40);
+		txtNum1.setBounds(100, 40, 100, 40);
+		txtNum2.setBounds(100, 90, 100, 40);
+		
 		lblNum1.setBounds(10, 40, 100, 40);
 		lblNum2.setBounds(10, 90, 100, 40);
 		lblNum3.setBounds(80, 200, 100, 50);
@@ -64,7 +65,7 @@ public class AwtProgCalcActionLis2{
   
 	public static void main(String[] args) 
 	{    
-        AwtProgCalcActionLis1 awt = new AwtProgCalcActionLis1();   //creating a frame  
+        AwtProgCalcActionLis2 awt = new AwtProgCalcActionLis2();   //creating a frame  
     }
 
 	

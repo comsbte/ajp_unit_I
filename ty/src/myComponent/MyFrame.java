@@ -6,7 +6,7 @@ import listener.MyWinAdapter;
 
 public class MyFrame extends Frame{
 	public MyFrame(String title) {
-		setSize(600, 250);        //setting size.
+		setSize(600, 400);        //setting size.
         setLocation(200,200);
         setTitle(title);  //setting title.  
         setLayout(null);   //set default layout for frame.  

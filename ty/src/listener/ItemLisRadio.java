@@ -7,7 +7,7 @@ public class ItemLisRadio implements ItemListener{
 
 	@Override
 	public void itemStateChanged(ItemEvent e) {
-		//System.out.println(e.paramString());
+		System.out.println(e.paramString());
 		String ch = (String)e.getItem();
 		System.out.println("I am "+ch);
 	}
