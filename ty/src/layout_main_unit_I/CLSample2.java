@@ -17,23 +17,23 @@ public class CLSample2 implements ActionListener{
 			cl = new CardLayout();
 			f.setLayout(cl);
 			
-			Button north = new Button("NORTH");
-			Button south = new Button("SOUTH");
-			Button east = new Button ("EAST");
-			Button west = new Button ("WEST");
-			Button center = new Button ("CENTER");
+			Button first = new Button("first");
+			Button second = new Button("second");
+			Button third = new Button ("third");
+			Button fourth = new Button ("fourth");
+			Button fifth = new Button ("fifth");
 			
-			f.add(north,"one");
-			f.add(south,"two");
-			f.add(east,"three");
-			f.add(west,"four");
-			f.add(center,"five");
+			f.add(first,"one");
+			f.add(second,"two");
+			f.add(third,"three");
+			f.add(fourth,"four");
+			f.add(fifth,"five");
 			
-			north.addActionListener(this);
-			south.addActionListener(this);
-			east.addActionListener(this);
-			west.addActionListener(this);
-			center.addActionListener(this);
+			first.addActionListener(this);
+			second.addActionListener(this);
+			third.addActionListener(this);
+			fourth.addActionListener(this);
+			fifth.addActionListener(this);
 			
 			
 			f.setVisible(true);
