@@ -12,11 +12,10 @@ public class CLSample2 implements ActionListener{
 
 		public CardLayout cl;
 		public Frame f;
-		public static void main(String[] args) {
-			CLSample2 gl = new CLSample2();
-			gl.f = new Frame();
-			 gl.cl = new CardLayout();
-			gl.f.setLayout(gl.cl);
+		public CLSample2() {
+			f = new Frame();
+			cl = new CardLayout();
+			f.setLayout(cl);
 			
 			Button north = new Button("NORTH");
 			Button south = new Button("SOUTH");
@@ -24,26 +23,30 @@ public class CLSample2 implements ActionListener{
 			Button west = new Button ("WEST");
 			Button center = new Button ("CENTER");
 			
-			gl.f.add(north,"one");
-			gl.f.add(south,"two");
-			gl.f.add(east,"three");
-			gl.f.add(west,"four");
-			gl.f.add(center,"five");
+			f.add(north,"one");
+			f.add(south,"two");
+			f.add(east,"three");
+			f.add(west,"four");
+			f.add(center,"five");
 			
-			north.addActionListener(gl);
-			south.addActionListener(gl);
-			east.addActionListener(gl);
-			west.addActionListener(gl);
-			center.addActionListener(gl);
+			north.addActionListener(this);
+			south.addActionListener(this);
+			east.addActionListener(this);
+			west.addActionListener(this);
+			center.addActionListener(this);
 			
 			
-			gl.f.setVisible(true);
-			gl.f.setSize(400, 400);
-			gl.f.addWindowListener(new WindowAdapter() {
+			f.setVisible(true);
+			f.setSize(400, 400);
+			f.addWindowListener(new WindowAdapter() {
 				public void windowClosing(WindowEvent e) {
-					gl.f.dispose();
+					f.dispose();
 				}
-			});
+			});	
+		}
+		
+		public static void main(String[] args) {
+			CLSample2 gl = new CLSample2();
 		}
 
 		@Override

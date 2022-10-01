@@ -9,6 +9,14 @@ import java.awt.Label;
  *
  */
 public class MyLabel extends Label {
+	
+	public MyLabel(String title, int fontSize) {
+		Font myFont;
+		myFont = new Font("Courier", Font.ITALIC,fontSize);
+		 
+		 setFont(myFont);
+		 setText(title);
+	}
 	/**
 	 * 
 	 * @param title

@@ -9,6 +9,16 @@ import java.awt.Font;
  *
  */
 public class MyButton extends Button{
+	
+	 public MyButton(String title, int fontSize) {
+		
+		 Font myFont;
+		 myFont = new Font("Courier", Font.PLAIN,fontSize);
+		 
+		 setFont(myFont);
+		 setLabel(title);
+	}
+	
 	/**
 	 * 
 	 * @param title

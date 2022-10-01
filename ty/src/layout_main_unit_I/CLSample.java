@@ -13,8 +13,12 @@ public class CLSample implements ActionListener{
 	public Frame f;
 	public static void main(String[] args) {
 		CLSample gl = new CLSample();
-		gl.f = new Frame();
-		 gl.cl = new CardLayout();
+		//Cannot Access Non static Data Members or 
+		//Member function inside Static Method
+		//hence required gl.f and gl.cl every time
+		
+		gl.f = new Frame(); 
+		gl.cl = new CardLayout();
 		gl.f.setLayout(gl.cl);
 		
 		Button north = new Button("NORTH");
