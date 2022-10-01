@@ -1,4 +1,4 @@
-package unit_I;
+package main_unit_I;
 
 import java.awt.CheckboxGroup;
 import java.awt.Choice;
@@ -10,19 +10,18 @@ import listener.MyWinAdapter;
 import listener.MywinLis;
 import myComponent.MyCheckbox;
 import myComponent.MyFrame;
+import myComponent.MyRadioButton;
 
-public class AwtProgRadioButton1 {
+public class AwtProgRadioButton2 {
 	public static void main(String[] args) {
 		MyFrame f = new MyFrame("Select Choice"); 
+		CheckboxGroup cbg = new CheckboxGroup();
 		
-		MyCheckbox cMale = new MyCheckbox("Male", true);
-		MyCheckbox cFemale = new MyCheckbox("Female", true);
+		MyRadioButton cMale = new MyRadioButton("Male", true,cbg);
+		MyRadioButton cFemale = new MyRadioButton("Female", true,cbg);
+		
 		cMale.setBounds(60,20,100,50);
 		cFemale.setBounds(60,50,100,50);
-		
-		CheckboxGroup cbg = new CheckboxGroup();
-		cMale.setCheckboxGroup(cbg);
-		cFemale.setCheckboxGroup(cbg);
 		
 		cMale.addItemListener(new ItemLisRadio());
 		cFemale.addItemListener(new ItemLisRadio());

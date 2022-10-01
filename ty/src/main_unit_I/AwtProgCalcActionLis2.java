@@ -1,4 +1,4 @@
-package unit_I;
+package main_unit_I;
 import java.awt.Color;
 import java.awt.Frame;
 import java.awt.TextField;
@@ -22,8 +22,11 @@ public class AwtProgCalcActionLis2{
 		Color bg = new Color(0, 255, 0);
 		Color fg = new Color(0, 0, 255);
 		
-		TextField txtNum1 = new TextField("0");
-		TextField txtNum2 = new TextField("0");
+		TextField txtNum1 = new TextField();
+		TextField txtNum2 = new TextField();
+		
+		txtNum1.setText("1");
+		txtNum2.setText("1");
 		
 		MyLabel lblNum1 = 
 				new MyLabel("Number 1",12,1,"Courier",bg,fg);

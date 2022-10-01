@@ -1,4 +1,4 @@
-package unit_I;
+package main_unit_I;
 
 import java.awt.Button;
 import java.awt.Label;
@@ -19,7 +19,7 @@ public class AwtProgTextField2 {
 		
 		TextField tpass = new TextField();
 		tpass.setBounds(60,100,100,20);
-		tpass.setEchoChar('*');
+		tpass.setEchoChar('#');
 		
 		
 		Button btn = new Button("Login");
