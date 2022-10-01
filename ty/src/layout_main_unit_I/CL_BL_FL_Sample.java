@@ -3,6 +3,7 @@ package layout_main_unit_I;
 import java.awt.BorderLayout;
 import java.awt.Button;
 import java.awt.CardLayout;
+import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.Frame;
 import java.awt.Label;
@@ -23,10 +24,12 @@ public class CL_BL_FL_Sample {
 		
 		MyLabel lNorth = new MyLabel("Motivation Quotes (NORTH)",fontSize+10);
 		lNorth.setAlignment(Label.CENTER);
+		lNorth.setBackground(Color.GREEN);
 		
 		Panel pCenter = new Panel();
 		CardLayout cl = new CardLayout();
 		pCenter.setLayout(cl);
+		pCenter.setBackground(Color.CYAN);
 		
 		
 		MyLabel l1 = new MyLabel("1) Nothing is impossible.",fontSize);
@@ -44,6 +47,7 @@ public class CL_BL_FL_Sample {
 		pCenter.add("6",l6);
 		
 		Panel pSouth = new Panel(new FlowLayout());
+		pSouth.setBackground(Color.ORANGE);
 		
 		MyButton btnNext = new MyButton("NEXT",fontSize);
 		MyButton btnPrev = new MyButton("Prev",fontSize);
