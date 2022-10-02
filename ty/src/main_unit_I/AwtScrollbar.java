@@ -55,15 +55,15 @@ public class AwtScrollbar {
 				//int year = sbTenure.getValue();
 				int year = e.getValue();
 				lblOutput.setText(year+" year");
-				if(e.BLOCK_DECREMENT ==e.getAdjustmentType())
+				if(AdjustmentEvent.BLOCK_DECREMENT ==e.getAdjustmentType())
 					System.out.println("Block Decrement");
-				else if(e.BLOCK_INCREMENT ==e.getAdjustmentType())
+				else if(AdjustmentEvent.BLOCK_INCREMENT ==e.getAdjustmentType())
 					System.out.println("Block Increment");
-				else if(e.UNIT_DECREMENT ==e.getAdjustmentType())
+				else if(AdjustmentEvent.UNIT_DECREMENT ==e.getAdjustmentType())
 					System.out.println("UNIT DECREMENT");
-				else if(e.UNIT_INCREMENT ==e.getAdjustmentType())
+				else if(AdjustmentEvent.UNIT_INCREMENT ==e.getAdjustmentType())
 					System.out.println("UNIT INCREMENT");
-				else if(e.TRACK ==e.getAdjustmentType())
+				else if(AdjustmentEvent.TRACK ==e.getAdjustmentType())
 					System.out.println("TRACK");
 			}
 		});	
