@@ -16,7 +16,7 @@ public class BLSample2 {
 		Frame f = new Frame();
 		Font myfont = new Font("Courier", Font.ITALIC,35);
 		
-		Label lNorth = new Label("File   Edit   Source   Refactor   Navigate   Search (Menubar Component)");
+		Label lNorth = new Label("Shortcut Menu Under Menubar Component (Added To Panel)");
 		
 		//Swing Component JLabel used for newline 
 		JLabel lWest = new JLabel("<html>ty<br>JRE System Library<br>src<br>listener</html>");
