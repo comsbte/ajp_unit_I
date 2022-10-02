@@ -52,10 +52,21 @@ public class AwtScrollbar {
 		sbTenure.addAdjustmentListener(new AdjustmentListener() {			
 			@Override
 			public void adjustmentValueChanged(AdjustmentEvent e) {
-				int year = sbTenure.getValue();
+				//int year = sbTenure.getValue();
+				int year = e.getValue();
 				lblOutput.setText(year+" year");
+				if(e.BLOCK_DECREMENT ==e.getAdjustmentType())
+					System.out.println("Block Decrement");
+				else if(e.BLOCK_INCREMENT ==e.getAdjustmentType())
+					System.out.println("Block Increment");
+				else if(e.UNIT_DECREMENT ==e.getAdjustmentType())
+					System.out.println("UNIT DECREMENT");
+				else if(e.UNIT_INCREMENT ==e.getAdjustmentType())
+					System.out.println("UNIT INCREMENT");
+				else if(e.TRACK ==e.getAdjustmentType())
+					System.out.println("TRACK");
 			}
-		});
+		});	
 		
 		f.setVisible(true);
 		f.setSize(700, 700);
