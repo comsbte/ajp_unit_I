@@ -17,7 +17,7 @@ public class CLSample implements ActionListener{
 		//Member function inside Static Method
 		//hence required gl.f and gl.cl every time
 		
-		gl.f = new Frame(); 
+		gl.f = new Frame("Sample Cardlayout"); 
 		gl.cl = new CardLayout();
 		gl.f.setLayout(gl.cl);
 		

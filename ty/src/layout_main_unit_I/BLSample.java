@@ -9,8 +9,9 @@ import listener.MyWinAdapter;
 
 public class BLSample {
 	public static void main(String[] args) {
-		Frame f = new Frame();
+		Frame f = new Frame("Border Layout Sample 1");
 		f.setLayout (new BorderLayout());
+		
 		Button north = new Button("NORTH");
 		Button south = new Button("SOUTH");
 		Button east = new Button ("EAST");

@@ -13,7 +13,7 @@ public class CLSample2 implements ActionListener{
 		public CardLayout cl;
 		public Frame f;
 		public CLSample2() {
-			f = new Frame();
+			f = new Frame("Sample Cardlayout");
 			cl = new CardLayout();
 			f.setLayout(cl);
 			

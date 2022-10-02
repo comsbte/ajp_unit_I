@@ -13,10 +13,11 @@ import javax.swing.JLabel;
 public class BLSample2 {
 	
 	public BLSample2() {
-		Frame f = new Frame();
+		Frame f = new Frame("Border Layout Sample 2");
 		Font myfont = new Font("Courier", Font.ITALIC,35);
 		
 		Label lNorth = new Label("Shortcut Menu Under Menubar Component (Added To Panel)");
+		lNorth.setFont(myfont);
 		
 		//Swing Component JLabel used for newline 
 		JLabel lWest = new JLabel("<html>ty<br>JRE System Library<br>src<br>listener</html>");

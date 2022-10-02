@@ -19,7 +19,7 @@ import myComponent.MyLabel;
 public class CL_BL_FL_Sample {
 
 	public static void main(String[] args) {
-		Frame f = new Frame();
+		Frame f = new Frame("CL BL FL layout combine use");
 		int fontSize = 20;
 		
 		MyLabel lNorth = new MyLabel("Motivation Quotes (NORTH)",fontSize+10);
