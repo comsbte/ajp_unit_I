@@ -59,7 +59,7 @@ public class AwtMenu {
 		
 		file.add(exit);
 		
-		f.setVisible(true);
+		f.setVisible(true); 
 		f.setSize(700, 700);
 		f.addWindowListener(new WindowAdapter() {
 			public void windowClosing(WindowEvent e) {
