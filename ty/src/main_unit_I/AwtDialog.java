@@ -10,7 +10,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
-public class AwtFileDialog {
+public class AwtDialog {
 	public static void main(String[] args) {
 		Frame f = new Frame("Programming Editor");
 		f.setLayout(new FlowLayout());
@@ -21,7 +21,7 @@ public class AwtFileDialog {
 		Dialog d = new Dialog(f,"Find ODD Even",false);
 		d.setLayout(new FlowLayout());
 		
-		TextField txtNumber = new TextField(10);
+		TextField txtNumber = new TextField("0",10);
 		d.add(txtNumber);
 		
 		Button btnEnter = new Button("Enter");
