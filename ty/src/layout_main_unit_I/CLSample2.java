@@ -47,7 +47,7 @@ public class CLSample2 implements ActionListener{
 		}
 		
 		public static void main(String[] args) {
-			CLSample2 gl = new CLSample2();
+			CLSample2 cls = new CLSample2();
 		}
 
 		@Override

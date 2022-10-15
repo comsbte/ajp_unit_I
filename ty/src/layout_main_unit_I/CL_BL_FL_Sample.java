@@ -39,14 +39,14 @@ public class CL_BL_FL_Sample {
 		MyLabel l5 = new MyLabel("5) Don't let other people write your script.",fontSize);
 		MyLabel l6 = new MyLabel("6) You are never too old to set another goal or to dream a new dream.",fontSize);
 		
-		pCenter.add("1",l1);
-		pCenter.add("2",l2);
-		pCenter.add("3",l3);
-		pCenter.add("4",l4);
-		pCenter.add("5",l5);
-		pCenter.add("6",l6);
+		pCenter.add(l1,"1");
+		pCenter.add(l2,"2");
+		pCenter.add(l3,"3");
+		pCenter.add(l4,"4");
+		pCenter.add(l5,"5");
+		pCenter.add(l6,"6");
 		
-		Panel pSouth = new Panel(new FlowLayout());
+		Panel pSouth = new Panel();
 		pSouth.setBackground(Color.ORANGE);
 		
 		MyButton btnNext = new MyButton("NEXT",fontSize);
@@ -87,8 +87,8 @@ public class CL_BL_FL_Sample {
 		pSouth.add(btnPrev);
 		pSouth.add(btnLast);
 		
-		f.add(pCenter,BorderLayout.CENTER);
 		f.add(lNorth,BorderLayout.NORTH);
+		f.add(pCenter,BorderLayout.CENTER);  
 		f.add(pSouth,BorderLayout.SOUTH);
 		
 		f.setVisible(true);

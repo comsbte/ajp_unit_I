@@ -10,7 +10,7 @@ import java.awt.Insets;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
-public class GBLSample {
+public class GBLSample { 
 	
 	public static void main(String[] args) {
 		Frame f = new Frame("Login Form");
@@ -22,6 +22,7 @@ public class GBLSample {
 		Button b1 = new Button("Button1");
 		gbc.gridx = 0;
 		gbc.gridy =0 ;
+		
 		gbc.ipadx = 40;
 		gbc.ipady = 10;
 		f.add(b1,gbc);

@@ -1,5 +1,6 @@
 package main_unit_I;
 
+import java.awt.Color;
 import java.awt.Frame;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
@@ -21,8 +22,10 @@ public class AwtScrollbar {
 		Label l1 = new Label("Tenure in Years");
 		gbc.gridx=0;
 		gbc.gridy = 0;
+		gbc.gridheight = 1;
+		gbc.gridwidth = 1;
 		f.add(l1,gbc);
-		int value = 1;
+		int value = 5;
 		
 		//Note that the actual maximum value of the scroll bar is the 
 		//maximum minus the visible amount. 
@@ -42,11 +45,12 @@ public class AwtScrollbar {
 		
 		f.add(sbTenure,gbc);
 		
-		Label lblOutput = new Label(value+" Year",Label.CENTER);
+		Label lblOutput = new Label(value+" Year");
 		gbc.gridx=1;
 		gbc.gridy = 1;
 		gbc.ipadx = 0;
 		gbc.fill = GridBagConstraints.HORIZONTAL;
+		lblOutput.setBackground(Color.RED);
 		f.add(lblOutput,gbc);
 		
 		sbTenure.addAdjustmentListener(new AdjustmentListener() {			
