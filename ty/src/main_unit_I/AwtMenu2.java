@@ -16,6 +16,22 @@ import java.io.File;
 import java.io.IOException;
 
 public class AwtMenu2 {
+	public static void createFile(Frame f,Label lblOut,String ext)
+	{
+		FileDialog fd = new FileDialog(f,
+				"Create "+ext+" Program",FileDialog.SAVE);
+		fd.setFile("*."+ext);
+		fd.setVisible(true);
+		String fileName = fd.getDirectory()+fd.getFile();
+		File myObj = new File(fileName);
+		try {
+			myObj.createNewFile();
+			lblOut.setText(fd.getFile()+" File Created Successfully");
+		} catch (IOException e1) {
+			e1.printStackTrace();
+		}
+	}
+	
 	public static void main(String[] args) {
 		Frame f = new Frame("Programming Editor");
 		f.setLayout(new GridBagLayout());
@@ -28,6 +44,7 @@ public class AwtMenu2 {
 		MenuItem exit = new MenuItem("Exit");
 		
 		Label lblOut = new Label();
+		f.add(lblOut);
 		
 		exit.addActionListener(new ActionListener() {
 			@Override
@@ -51,54 +68,21 @@ public class AwtMenu2 {
 		cpp.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				FileDialog fd = new FileDialog(f,
-						"Create C++ Program",FileDialog.SAVE);
-				fd.setFile("*.cpp");
-				fd.setVisible(true);
-				String fileName = fd.getDirectory()+fd.getFile();
-				File myObj = new File(fileName);
-				try {
-					myObj.createNewFile();
-					lblOut.setText(fd.getFile()+" File Created Successfully");
-				} catch (IOException e1) {
-					e1.printStackTrace();
-				}
+				createFile(f,lblOut,"cpp");
 			}
 		});
 		
 		java.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				FileDialog fd = new FileDialog(f,
-						"Create JAVA Program",FileDialog.SAVE);
-				fd.setFile("*.java");
-				fd.setVisible(true);
-				String fileName = fd.getDirectory()+fd.getFile();
-				File myObj = new File(fileName);
-				try {
-					myObj.createNewFile();
-					lblOut.setText(fd.getFile()+" File Created Successfully");
-				} catch (IOException e1) {
-					e1.printStackTrace();
-				}
+				createFile(f,lblOut,"java");
 			}
 		});
 		
 		py.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				FileDialog fd = new FileDialog(f,
-						"Create C++ Program",FileDialog.SAVE);
-				fd.setFile("*.py");
-				fd.setVisible(true);
-				String fileName = fd.getDirectory()+fd.getFile();
-				File myObj = new File(fileName);
-				try {
-					myObj.createNewFile();
-					lblOut.setText(fd.getFile()+" File Created Successfully");
-				} catch (IOException e1) {
-					e1.printStackTrace();
-				}
+				createFile(f,lblOut,"py");
 			}
 		});
 		
@@ -114,7 +98,12 @@ public class AwtMenu2 {
 		save.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				System.out.println("Saved Files Successfully");
+				FileDialog fd = new FileDialog(f,
+						"Create JAVA Program",FileDialog.LOAD);
+				fd.setVisible(true);
+				String fileName = fd.getDirectory()+fd.getFile();
+				lblOut.setText(fileName);
+				f.setVisible(true);
 			}
 		});
 		

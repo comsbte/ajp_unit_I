@@ -14,17 +14,19 @@ import java.awt.event.WindowEvent;
 public class AwtMenu {
 	public static void main(String[] args) {
 		Frame f = new Frame("Programming Editor");
-		f.setLayout(new GridBagLayout());
-		GridBagConstraints gbc = new GridBagConstraints();
+		//f.setLayout(new GridBagLayout());
+		//GridBagConstraints gbc = new GridBagConstraints();
 		
 		MenuBar mb = new MenuBar();
 		Menu file = new Menu("File");
 		Menu edit = new Menu("Edit");
 		Menu help = new Menu("Help");
+		
 		MenuItem exit = new MenuItem("Exit");
 		exit.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				System.out.println(e.getActionCommand());
 				f.dispose();
 			}
 		});
